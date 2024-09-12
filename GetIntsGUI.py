@@ -5,14 +5,11 @@ import os
 import sys
 
 def extract_intensities(tif_file, output_folder):
-    # Bild öffnen
     with tifffile.TiffFile(tif_file) as tif:
         image = tif.asarray()
-
-    # Zugriff auf den 0. Frame
+        
     frame_0 = image[0]
 
-    # Koordinaten und Intensitäten sammeln
     height, width = frame_0.shape
     data = []
 
@@ -21,13 +18,10 @@ def extract_intensities(tif_file, output_folder):
             intensity = frame_0[y, x]
             data.append({'x': x, 'y': y, 'Intensity': intensity})
 
-    # In ein DataFrame umwandeln
     df = pd.DataFrame(data)
 
-    # Ausgabeordner sicherstellen
     os.makedirs(output_folder, exist_ok=True)
 
-    # In einer CSV-Datei speichern
     output_csv_path = os.path.join(output_folder, 'Int.csv')
     df.to_csv(output_csv_path, index=False)
 
