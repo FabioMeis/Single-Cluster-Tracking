@@ -11,9 +11,13 @@ Stelle sicher, dass du Python 3.x installiert hast. Außerdem müssen folgende P
 Für die korrekte Funktion der Pipeline müssen alle Skripte im selben Ordner gespeichert werden. Die folgenden Dateien sollten sich im Projektverzeichnis befinden:
 
 GUI.py: Startet die grafische Benutzeroberfläche.
+
 CalculateDWithFlexibleAlphaGUI.py: Skript zur Berechnung der Diffusionskoeffizienten.
+
 LowvsHighGUI.py: Skript zur Auswertung und Visualisierung der Diffusionskoeffizienten und Clustergrößen.
+
 GetIntsGUI.py: Skript zur Extraktion von Intensitätsdaten aus TIF-Dateien.
+
 PlotIntsGUI.py: Skript zur Analyse der Cluster- und Hintergrundkonzentrationen.
 
 Verwendung
